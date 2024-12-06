@@ -1,0 +1,82 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+		<StackPanel Width="500" Height="200">
+			<Button Classes="CalculatorButton" 
+					Content="Test1"/>
+			
+			<Button Content="Test2"/>
+			
+			<Button Classes ="GreenButton"
+					Content="Green"/>
+		
+			<Button Classes="YellowButton"
+					Content="Yellow"/>
+
+			<Button Classes="RedButton"
+					Content="Red"/>
+		</StackPanel>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+	<Style Selector="Button">
+		<Setter Property="VerticalContentAlignment"   Value="Center"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment"          Value="Center"/>
+	</Style>
+	
+	<Style Selector="Button.CalculatorButton">
+		<Setter Property="VerticalAlignment"     Value="Stretch"/>
+		<Setter Property="HorizontalAlignment"   Value="Stretch"/>
+		<Setter Property="Foreground"			 Value="White"/>
+		<Setter Property="Background"			 Value="#333333"/>
+		<Setter Property="FontSize"				 Value="18"/>
+		<Setter Property="CornerRadius"			 Value="8"/>
+
+		<Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background"		 Value="#666666" />
+		</Style>
+
+		<Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background"		 Value="#333333" />
+		</Style>
+	</Style>
+	
+	<Style Selector="Button.GreenButton">
+		<Setter Property="Background"			 Value="Green"/>
+		
+		<Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background"		 Value="LightGreen" />
+		</Style>
+
+		<Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background"		 Value="#006400" />
+		</Style>
+	</Style>
+
+	
+	<Style Selector="Button.YellowButton">
+		<Setter Property="Background"			 Value="#FFFF00"/>
+
+		<Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background"		 Value="#FFFF66" />
+		</Style>
+
+		<Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background"		 Value="#CCCC00" />
+		</Style>
+	</Style>
+
+
+	<Style Selector="Button.RedButton">
+		<Setter Property="Background"			 Value="#FF0000"/>
+
+		<Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background"		 Value="#FF6666" />
+		</Style>
+
+		<Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background"		 Value="#CC0000" />
+		</Style>
+	</Style>
+</Styles>
